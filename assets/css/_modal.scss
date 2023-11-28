@@ -1,4 +1,9 @@
 .modal {
+
+    &.fade.show {
+        height: 100vh;
+    }
+    
     &-content {
         background-color: $grey;
         border-radius: 1.25rem;

@@ -407,6 +407,9 @@ address {
   right: -1px;
 }
 
+.modal.fade.show {
+  height: 100vh;
+}
 .modal-content {
   background-color: rgb(41, 41, 41);
   border-radius: 1.25rem;
