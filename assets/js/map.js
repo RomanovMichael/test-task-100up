@@ -16,7 +16,7 @@ function initMap() {
 
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
       iconLayout: 'default#image',
-      iconImageHref: '/assets/svg/bycars-favicon.svg',
+      iconImageHref: './assets/svg/bycars-favicon.svg',
       iconImageSize: [40, 40],
       iconImageOffset: [-5, -38]
     }),

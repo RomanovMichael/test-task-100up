@@ -70,7 +70,6 @@ form.addEventListener('submit', async function(e) {
                 $(popupModal).modal('hide')
                 thanksModalTitle.textContent = "Заявка отправлена успешно"
                 $(thanksModal).modal('show')
-                console.log(response)
             }
             return data.json()
         }).catch((err) => {
