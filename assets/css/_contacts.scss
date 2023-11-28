@@ -1,0 +1,78 @@
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.contacts {
+    padding: 3.75rem 0;
+    @include lg {
+        padding-top: 7.5rem;
+        padding-bottom: 10.3125rem;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__phone { 
+        margin-top: .75rem;
+        font-size: 1.3125rem;
+        line-height: 140%;
+        font-weight: 700;
+        transition: all .3s ease;
+        &:hover {
+            opacity: .72;
+            transition: all .3s ease;
+        }
+
+        @include lg { 
+            margin-top: 3.75rem;
+            font-size: 3.0625rem;
+            line-height: 120%;
+        }
+    }
+
+    &__address {
+        margin-top: 0.75rem;
+        font-size: 1rem;
+        font-weight: 500;
+        @include lg { 
+            font-size: 1.6875rem;
+
+        }
+    }
+
+    &__btns {
+        gap: 1rem;
+        margin-top: 1.25rem;
+        width: 100%;
+
+        @include lg {
+            margin-top: 2.75rem;
+        }
+        @include xl {
+            gap: 1.875rem;
+        }
+        
+        & .btn {
+            @include lg {
+                height: 3.25rem;
+                width: 17.125rem;
+
+            }
+        }
+    }
+
+    &__map {
+        position: relative;
+        border-radius: 1.25rem;
+        margin-top: 4.441rem;
+        overflow: hidden;
+        height: 27.5625rem;
+        transform: translate3d(0, 0, 0);
+        @include lg { 
+            height: 30.75rem;
+            margin-top: 0;
+        }
+    }
+}

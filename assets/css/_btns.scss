@@ -1,0 +1,41 @@
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border-radius:  0.75rem;
+  padding: .75rem 2.1875rem;
+  height: 3.75rem;
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: .72;
+    transition: all .3s ease;
+  }
+}
+
+.btn.-fill-accent {
+  background-color: $accent;
+  color: $black;
+}
+
+.btn.-fill-grey {
+  background-color: $grey;
+  color: $white;
+}
+
+.btn.-border {
+  border: 1px solid $grey;
+  color: $grey;
+}
+
+
+

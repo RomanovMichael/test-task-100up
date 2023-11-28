@@ -1,0 +1,456 @@
+.catalog {
+    padding: 3.75rem 0;
+    background-color: $accent-2;
+
+    @include lg {
+        padding-top: 5.1562rem;
+        padding-bottom: 6.406rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.-fav {
+        background-color: $white;
+    }
+
+    &.-favourites {
+        margin-top: 3.75rem;
+
+        @include lg {
+            margin-top: 8.125rem;
+        }
+    }
+
+    &__filter {
+        border-radius: .25rem;
+        background-color: $accent-2;
+        margin-top: 1.25rem;
+        padding-left: 1.125rem;
+        padding-right: 1.125rem;
+        padding-top: .625rem;
+        padding-bottom: .625rem;
+        gap: .5rem;
+
+        @include lg {
+            margin-top: 2.5rem;
+            gap: 1.875rem;
+        }
+
+        &-item {
+            &-title {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 140%;
+                color: $black;
+            }
+
+            &-icon {
+                margin-right: .125rem;
+                position: relative;
+                width: 2.625rem;
+                height: 2.625rem;
+
+                @include lg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+
+                & svg {
+                    position: absolute; 
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+    &__content {
+        margin-top: 1.25rem;
+
+        @include lg {
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__slider {
+        & .swiper-wrapper {
+            flex-direction: column;
+            gap: 1.875rem;
+
+            @include md {
+                flex-direction: row;
+                gap: unset;
+            }
+        }
+
+        &-more {
+            font-size: 1.3125rem;
+            line-height: 140%;
+            font-weight: 700;
+            color: $black;
+            margin-top: 2.5rem;
+            border: none;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            width: 100%;
+
+            & .more-btn-inner {
+                position: relative;
+
+                & svg {
+                    display: block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-left: .75rem;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    &__desc {
+        margin-top: .75rem;
+    }
+
+    &-card {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        border-radius: .625rem;
+        background-color: $grey-light;
+
+        @include lg {
+            border-radius: 1.25rem;
+        }
+
+
+
+        &-view {
+            display: grid;
+        }
+
+        &-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            // padding-bottom: 80%; деск
+            // мобилка мин
+            padding-bottom: 65.63573883161511%;
+
+            // десктоп мин
+            // 57.446808510638306%
+
+            @include lg {
+                // padding-bottom: 71.4622641509434%;
+                padding-bottom:  57.446808510638306%;
+            }
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &-wrap {
+                padding-top: 2.5625rem;
+                grid-area: 1/-1;
+            }
+        }
+
+        &-details {
+            grid-area: 1/-1;
+            z-index: 1;
+        }
+
+        &-topline {
+            transition: all .3s ease;
+            position: relative;
+            opacity: 0.98;
+            background: $blur;
+            backdrop-filter: blur(2.8125rem);
+            padding-left: .5625rem;
+            padding-right: .5625rem;
+            padding-top: .625rem;
+
+            @include lg {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 0.6875rem;
+            }
+        }
+
+
+
+        &-logo {
+            position: relative;
+            width: 3.3125rem;
+            height: 1.9385rem;
+
+            @include lg {
+                width: 3.6975rem;
+                height: 2.8125rem;
+            }
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+        &-tags {
+            gap: .5143rem;
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+            padding-left: .5rem;
+            padding-right: .5rem;
+
+            @include lg {
+                padding-left: 1.1875rem;
+                padding-right: 1.1875rem;
+            }
+        }
+
+        &-tag {
+            font-family: 'Suisse';
+            font-size: .75rem;
+            line-height: 90%;
+            font-weight: 400;
+            padding: .5143rem;
+            border-radius: 5.125rem;
+            color: $black;
+            background-color: $accent-2;
+            box-shadow: 0px 2.74232px 2.74232px 0px rgba(0, 0, 0, 0.25);
+
+            @include lg {
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                font-size: .875rem;
+                padding: .75rem;
+            }
+
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+
+        &-content {
+            padding-top: .75rem;
+            padding-bottom: 1.25rem;
+            padding-left: .5625rem;
+            padding-right: .5625rem;
+
+            @include lg {
+                padding: 1.25rem;
+            }
+        }
+
+        &-title {
+            display: block;
+            color: $black;
+            font-size: 1.3125rem;
+            line-height: 105%;
+            font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            @include lg {
+                font-size: 1.5rem;
+            }
+
+        }
+
+        &-desc {
+            display: block;
+            font-size: 1rem;
+            line-height: 130%;
+            margin-top: .5rem;
+            color: $black;
+            letter-spacing: 0.16px;
+        }
+
+        &-stats {
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &-row {
+            position: relative;
+            justify-content: space-between;
+            margin-top: 0.4rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0.3em;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" height="1" viewBox="0 0 200 1" fill="none"><path d="M1 0C0.723858 0 0.5 0.223858 0.5 0.5C0.5 0.776142 0.723858 1 1 1L1 0ZM1 1H1.74254L1.74254 0H1L1 1ZM3.22761 1H4.71269L4.71269 0H3.22761L3.22761 1ZM6.19776 1H7.68284L7.68284 0H6.19776L6.19776 1ZM9.16791 1H10.653L10.653 0H9.16791L9.16791 1ZM12.1381 1H13.6231L13.6231 0H12.1381L12.1381 1ZM15.1082 1H16.5933L16.5933 0H15.1082L15.1082 1ZM18.0784 1H19.5634L19.5634 0H18.0784L18.0784 1ZM21.0485 1H22.5336L22.5336 0H21.0485L21.0485 1ZM24.0187 1H25.5037L25.5037 0H24.0187L24.0187 1ZM26.9888 1H28.4739L28.4739 0H26.9888L26.9888 1ZM29.959 1H31.444L31.444 0H29.959L29.959 1ZM32.9291 1H34.4142L34.4142 0H32.9291L32.9291 1ZM35.8993 1H37.3843L37.3843 0H35.8993L35.8993 1ZM38.8694 1H40.3545L40.3545 0H38.8694L38.8694 1ZM41.8396 1H43.3246L43.3246 0H41.8396L41.8396 1ZM44.8097 1H46.2948L46.2948 0H44.8097L44.8097 1ZM47.7798 1H49.2649L49.2649 0H47.7798L47.7798 1ZM50.75 1H52.2351L52.2351 0H50.75L50.75 1ZM53.7201 1H55.2052L55.2052 0H53.7201L53.7201 1ZM56.6903 1H58.1754L58.1754 0H56.6903L56.6903 1ZM59.6604 1H61.1455L61.1455 0H59.6604L59.6604 1ZM62.6306 1H64.1157L64.1157 0H62.6306L62.6306 1ZM65.6007 1H67.0858L67.0858 0H65.6007L65.6007 1ZM68.5709 1H70.056L70.056 0H68.5709L68.5709 1ZM71.541 1H73.0261L73.0261 0H71.541L71.541 1ZM74.5112 1H75.9963L75.9963 0H74.5112L74.5112 1ZM77.4813 1H78.9664L78.9664 0H77.4813L77.4813 1ZM80.4515 1H81.9366L81.9366 0H80.4515L80.4515 1ZM83.4216 1H84.9067L84.9067 0H83.4216L83.4216 1ZM86.3918 1H87.8769L87.8769 0H86.3918L86.3918 1ZM89.362 1H90.847L90.847 0H89.362L89.362 1ZM92.3321 1H93.8172L93.8172 0H92.3321L92.3321 1ZM95.3023 1H96.7873L96.7873 0H95.3023L95.3023 1ZM98.2724 1H99.7575L99.7575 0H98.2724L98.2724 1ZM101.243 1H102.728L102.728 0H101.243L101.243 1ZM104.213 1H105.698L105.698 0H104.213L104.213 1ZM107.183 1H108.668L108.668 0H107.183L107.183 1ZM110.153 1H111.638L111.638 0H110.153L110.153 1ZM113.123 1H114.608L114.608 0H113.123L113.123 1ZM116.093 1H117.578L117.578 0H116.093L116.093 1ZM119.063 1H120.549L120.549 0H119.063L119.063 1ZM122.034 1H123.519L123.519 0H122.034L122.034 1ZM125.004 1H126.489L126.489 0H125.004L125.004 1ZM127.974 1H129.459L129.459 0H127.974L127.974 1ZM130.944 1H132.429L132.429 0H130.944L130.944 1ZM133.914 1H135.399L135.399 0H133.914L133.914 1ZM136.884 1H138.369L138.369 0H136.884L136.884 1ZM139.855 1H141.34L141.34 0H139.855L139.855 1ZM142.825 1H144.31L144.31 0H142.825L142.825 1ZM145.795 1H147.28L147.28 0H145.795L145.795 1ZM148.765 1H150.25L150.25 0H148.765L148.765 1ZM151.735 1H153.22L153.22 0H151.735L151.735 1ZM154.705 1H156.19L156.19 0H154.705L154.705 1ZM157.675 1H159.161L159.161 0H157.675L157.675 1ZM160.646 1H162.131L162.131 0H160.646L160.646 1ZM163.616 1H165.101L165.101 0H163.616L163.616 1ZM166.586 1H168.071L168.071 0H166.586L166.586 1ZM169.556 1H171.041L171.041 0H169.556L169.556 1ZM172.526 1H174.011L174.011 0H172.526L172.526 1ZM175.496 1H176.981L176.981 0H175.496L175.496 1ZM178.467 1H179.952L179.952 0H178.467L178.467 1ZM181.437 1H182.922L182.922 0H181.437L181.437 1ZM184.407 1H185.892L185.892 0H184.407L184.407 1ZM187.377 1H188.862L188.862 0H187.377L187.377 1ZM190.347 1H191.832L191.832 0H190.347L190.347 1ZM193.317 1H194.802L194.802 0H193.317L193.317 1ZM196.287 1H197.773L197.773 0H196.287L196.287 1ZM199.258 1H200L200 0H199.258L199.258 1Z" fill="%23292929"/></svg>');
+                z-index: -1;
+            }
+
+            &-item {
+                display: block;
+                color: $black;
+                background-color: $grey-light;
+                font-size: 1rem;
+                line-height: 130%;
+                letter-spacing: .16px;
+
+                &:first-child {
+                    padding-right: .25em;
+                    color: $grey;
+                }
+
+                &:last-child {
+                    padding-left: .25em;
+                    text-align: left;
+                    width: 8.5rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: $black;
+
+                    @include lg {
+                        font-weight: 600;
+                    }
+                }
+
+            }
+
+
+        }
+
+        &-btn {
+            width: 100%;
+            margin-top: 1.5rem;
+
+            @include lg {
+                margin-top: 1.05rem;
+                height: 4.5rem;
+            }
+        }
+
+        &-controls {
+            @include lg {
+                gap: .875rem;
+            }
+        }
+
+        &-control {
+            position: relative;
+            width: 2rem;
+            height: 2em;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            border: none;
+            background-color: transparent;
+
+            @include lg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            & svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                &:last-child {
+                    color: $black;
+                }
+            }
+        }
+
+        &-side.-bottom {
+            margin-top: auto;
+        }
+
+        &-price {
+            gap: 1.125rem;
+
+            @include lg {
+                justify-content: space-between;
+            }
+
+            &-title {
+                font-size: .875rem;
+                line-height: 105%;
+                color: $grey;
+
+                @include lg {
+                    margin-bottom: .25rem;
+                }
+            }
+
+            &-value {
+                font-size: inherit;
+                line-height: inherit;
+
+                @include lg {
+                    line-height: 105%;
+                    font-size: 1.75rem;
+                }
+
+                &-wrap {
+                    font-size: 1rem;
+                    line-height: 105%;
+                    font-weight: 600;
+                    color: $black;
+
+                    @include lg {
+                        display: flex;
+                        align-items: center;
+                        gap: .75rem;
+                    }
+                }
+
+                &.-old {
+                    position: relative;
+                    font-size: .75rem;
+                    line-height: 130%;
+                    letter-spacing: 0.12px;
+                    color: $grey;
+                    font-weight: 500;
+
+                    @include lg {
+                        font-size: 1.125rem;
+                        line-height: 130%;
+                        /* 23.4px */
+                        letter-spacing: 0.18px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 58%;
+                        width: 100%;
+                        height: 0px;
+                        border-top: 0.5px solid $grey;
+                    }
+                }
+            }
+        }
+    }
+
+}

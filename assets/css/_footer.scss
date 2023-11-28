@@ -1,0 +1,141 @@
+.footer {
+    color: $white;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.footer-top {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    background-color: #202020;
+    border-radius: 1.25rem 1.25rem 0 0;
+
+    @include md { 
+        padding-top: 2.125rem;
+        padding-bottom: 4.39rem;
+    }
+}
+
+.footer-bottom {
+    background-color: $grey;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @include lg {
+        padding-top: .875rem;
+        padding-bottom: .875rem;
+    }
+}
+
+.footer-bottom__links {
+    margin-top: 1.875rem;
+    gap: .625rem;
+
+    @include md {
+        gap: 1.5rem;
+    }
+
+    @include xl {
+        margin-top: 0;
+    }
+}
+
+.footer-bottom__links a {
+    transition: all .3s ease;
+    text-decoration: none;
+
+}
+
+.footer-bottom__links a:hover {
+    transition: all .3s ease;
+    opacity: .8;
+}
+
+.footer-bottom__links a span {
+    font-size: 1rem;
+    line-height: 130%;
+    font-weight: 500;
+    color: $white;
+    border-bottom: 1px solid $white;
+    letter-spacing: 0.16px;
+}
+
+.footer-bottom__copyright {
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.48px;
+
+    @include lg {
+        font-size: .625rem;
+        letter-spacing: 0.4;
+    }
+}
+
+
+.footer-top__phone {
+    color: $accent;
+    font-size: 1.5rem;
+    line-height: 140%;
+    font-weight: 600;
+    transition: all .3s ease;
+
+    &:hover {
+        opacity: .72;
+    }
+
+    @include md {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+
+}
+
+.footer-top__mail {
+    font-size: 1.125rem;
+    line-height: 140%;
+    font-weight: 500;
+    transition: all .3s ease;
+    margin-top: .5rem;
+    @include lg {
+        font-size: 1.5rem;
+    }
+}
+
+.footer-top__mail:hover {
+    opacity: 0.8;
+    transition: all .3s ease;
+}
+
+.footer-top__btn {
+    width: 100%;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+
+    @include md { 
+        margin-top: 0;
+        margin-bottom: 2.0625rem;
+    }
+}
+
+.footer-top__address {
+    font-size: 1rem;
+    line-height: 130%;
+    font-weight: 500;
+    letter-spacing: 0.16px;
+    margin-top: 2.5rem;
+
+    & span { 
+        width: fit-content;
+        display: block;
+        margin-top: 0.5rem;
+        line-height: inherit;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    @include md {
+        margin-top: 1.25rem;
+    }
+}

@@ -1,0 +1,52 @@
+.logo {
+    transition: all .3s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+    &:hover {
+        opacity: .72;
+        transition: all .3s ease;
+    }
+}
+
+.footer-top__logo .logo {
+    &-thumb.-top { 
+        font-size: 2.5rem;
+        line-height: normal;
+        font-weight: 750;
+    }
+
+    &-thumb.-bottom { 
+        font-size: .9375rem;
+        font-weight: 500;
+        letter-spacing: 0.75px;
+        line-height: normal;
+    }
+}
+
+
+
+.header__logo .logo {
+    color: white;
+    &-thumb.-top { 
+        font-size: 1.550rem;
+        line-height: normal;
+        font-weight: 700;
+        @include lg {
+            font-size: 2.5rem;
+        }
+    }
+
+    &-thumb.-bottom { 
+        font-size: .581rem;
+        font-weight: 500;
+        letter-spacing: 0.465px;
+        line-height: normal;
+
+        @include lg {
+            letter-spacing: 0.75px;
+            font-size: .9375rem;
+        }
+    }
+}
+
+

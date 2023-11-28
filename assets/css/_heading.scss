@@ -1,0 +1,11 @@
+.section-title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 110%;
+    color: $black;
+    @include lg {
+        font-size: 4.5rem;
+        line-height: 120%;
+        margin-bottom: 2.5rem;
+    }
+}

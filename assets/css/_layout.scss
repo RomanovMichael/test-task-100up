@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background-repeat: no-repeat;
+	font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: $white;
+	min-width: 20rem;
+	font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 16px);
+}
+
+.layout {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.main-content {
+	position: relative;
+	flex: 1 0 auto;
+}
+
+.container-fluid {
+	padding: 0 .9375rem;
+}
+
+/*=================== BS breakpoints ===================*/
+@media screen and (min-width: 576px) {
+    html,
+    body {
+        font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 16px);
+    }
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+	html,
+    body {
+        font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 12px);
+    }
+
+	// .container-fluid { 
+	// 	padding: 0;
+	// }
+
+}
+
+@media screen and (min-width: 1200px) {
+	html,
+    body {
+        font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 10.5px);
+    }
+
+	// .container-fluid {
+	// 	max-width: 72.125rem;
+	// }
+
+}
+
+@media screen and (min-width: 1400px) {
+	html,
+    body {
+        font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 11px);
+    }
+
+	.container-fluid {
+		max-width: 111.125rem;
+		// padding: 0 !important;
+	}
+}
+
+/*=================== Custom breakpoints ===================*/
+@media screen and (min-width: 1690px) {
+	html,
+    body {
+        font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 12px);
+    }
+
+}
+
+@media screen and (min-width:1800px) {
+	html, body {
+		font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 13px);
+	}
+}
+
+@media screen and (min-width: 1880px) {
+	html, body {
+		font-size: calc((100vw - 320px) / (1920 - 320) * (16 - 14) + 14px);
+	}
+
+	.container-fluid { 
+		// max-width: 111.125rem;
+		padding: 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-style: normal;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+ul, ol, li	 {
+	margin: 0;
+	padding: 0;
+	list-style: none !important;
+}
+
+address {
+	padding: 0;
+	margin: 0;
+}
+
+.stretched-link::after {
+	z-index: 5;
+}

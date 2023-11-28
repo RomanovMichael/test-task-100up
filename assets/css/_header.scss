@@ -1,0 +1,148 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black-2;
+    z-index: 2;
+    padding: .5625rem 0;
+    transition: all .2s ease-out;
+    will-change: transform;
+
+    @include lg {
+        padding: 2rem 0;
+    }
+
+    &.hide {
+        transform: translateY(-101%);
+        transition: all .2s ease-in-out;
+        will-change: transform;
+    }
+
+    &__side.-left {
+        @include lg {
+            gap: 2rem;
+        }
+
+        @include xl {
+            gap: 3.5625rem;
+        }
+
+        @include xxl {
+            gap: 4.5625rem;
+        }
+    }
+
+    &__side.-right {
+        @include lg {
+            width: 100%;
+            max-width: 31.5rem;
+        }
+
+        @include xl {
+            max-width: 41.8rem;
+            padding-right: 1.125rem;
+        }
+
+    }
+
+
+    &__feedback {
+        width: 17.125rem;
+        height: 3.25rem;
+    }
+
+    &__phone {
+        color: $white;
+        font-size: 1.125rem;
+        line-height: normal;
+        font-weight: 700;
+        transition: all .3s ease;
+
+        &:hover {
+            transition: all .3s ease;
+            opacity: .72;
+
+        }
+    }
+
+    &__address {
+        margin-top: 0.25rem;
+        color: $white;
+        font-size: 1rem;
+        line-height: normal;
+        & span {
+            display: block;
+            max-width: 8rem;
+        }
+    }
+
+    &__nav-wrap.-mob .header__nav {
+        gap: .5rem;
+        &-item { 
+            position: relative;
+            width: 2.652rem;
+            height: 2.625rem;
+
+            & svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+
+    &__nav-wrap.-desk .header__nav {
+        font-size: 1rem;
+        line-height: normal;
+        transition: all .3s ease;
+        gap: 1.25rem;
+        &-item {
+            color: $white;
+            transition: all .3s ease;
+            &:hover {
+                opacity: 0.72;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &__nav-wrap .header__nav {
+        & a.-favourites {
+            color: white;
+        } 
+    }
+    
+    &__favourites {
+        width: 2.652rem;
+        height: 2.625rem;
+        position: relative;
+        background-color: transparent;
+        padding: 0;
+        color: $white;
+        transition: all .3s ease;
+
+        &:hover {
+            color: white;
+            opacity: .72;
+            transition: all .3s ease;
+        }
+
+        & svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &.-desk {
+            width: 2rem;
+            height: 2rem;
+        }
+
+    }
+}

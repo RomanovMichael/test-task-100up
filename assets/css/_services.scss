@@ -1,0 +1,128 @@
+.services {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    @include lg {
+        padding-top: 6.875rem;
+        padding-bottom: 7.25rem;
+    }
+}
+
+.services-card {
+    position: relative;
+    border-radius: 1.25rem;
+    background-color: $accent-2;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    padding-top: 1.25rem;
+    padding-bottom: 2.1875rem;
+    color: $black;
+    min-height: 25rem;
+    transform: translate3d(0,0,0);
+
+    @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
+
+.services-card__content {
+    margin-bottom: 1rem;
+}
+
+.services-card__more {
+    margin-top: auto;
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 700;
+
+    @include lg {
+        font-size: 1.125rem;
+    }
+}
+
+.services-card__icon {
+    margin-bottom: 1.25rem;
+}
+
+.services-card__more span {
+    margin-left: 0.25rem;
+
+    @include lg {
+        margin-left: .5rem;
+    }
+}
+
+.services-card .arrow-outdoor {
+    width: 1rem;
+    height: 1rem;
+    transition: all .3s ease;
+    will-change: transform;
+
+    @include lg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.services-card:hover .arrow-outdoor {
+    transition: all .3s ease;
+    will-change: transform;
+    transform: translate(15%, -15%);
+}
+
+.services-card__link::after {
+    transition: all .3s ease;
+    opacity: .14;
+    background-color: transparent;
+}
+.services-card:hover .services-card__link::after {
+    background-color: $black;
+    transition: all .3s ease;
+}
+
+.services-card__title {
+    font-size: 1.3125rem;
+    line-height: 140%;
+    font-weight: 600;
+
+    @include xl {
+        font-size: 1.5rem;
+        line-height: 120%;
+    }
+
+    @include xxl {
+        font-size: 2rem;
+    }
+}
+
+.services-card__desk {
+    font-size: 1rem;
+    line-height: 140%;
+    font-weight: 500;
+    margin-top: 0.5rem;
+
+    @include xl {
+        font-size: 1.3125rem;
+        line-height: 130%;
+        letter-spacing: 0.21px;
+    }
+}
+
+.services-card__icon {
+    width: 7.5rem;
+}
+
+.services-card__icon img {
+    width: 100%;
+    aspect-ratio: 1.2/1.21;
+}
+
+.services__desc {
+    font-size: 1rem;
+    line-height: 140%;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+}

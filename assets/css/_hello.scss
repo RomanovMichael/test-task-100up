@@ -1,0 +1,154 @@
+.hello {
+    width: 100%;
+    height: 100vh;
+    background-color: $black-2;
+    height: 100vh;
+    min-height: 50rem;
+    padding-top: 3.75rem ;
+
+    @include lg {
+        padding-top:  8.125rem;
+    }
+
+    & .container-fluid {
+        flex: 1;
+        flex-shrink: 0;
+    } 
+
+    &__wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        color: $white;
+        flex: 1;
+        padding-top: 1.875rem;
+        flex-shrink: 0;
+        min-height: 16rem;
+
+        @include lg {
+            padding-top: 11.25rem;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        z-index: 1;
+        @include lg {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-size: 1.75rem;
+        line-height: 110%;
+        font-weight: 700;
+
+        @include lg {
+            font-size: 4.5rem;
+        }
+    }
+
+    &__desc {
+        font-size: 1rem;
+        line-height: 140%;
+        margin-top: .75rem;
+        @include lg {
+            font-size: 1.5rem;
+            margin-top: 1.25rem;
+        }
+    }
+
+
+    &__btn {
+        z-index: 1;
+        margin-top: 3rem;
+        @include lg {
+            margin-top: 3.75rem;
+            width: 26rem;
+            height: 5rem;
+        }
+    }
+
+    &__bonus {
+        margin-top: 4.1875rem;
+        padding: 1.875rem 0;
+        background-color: $black;
+        z-index: 1;
+        @include lg {
+            padding-bottom: 6.28rem;
+            padding-top: 0;
+            background-color: transparent;
+        }
+
+        &-wrap {
+            gap: 1.5rem;
+            @include xl { 
+                gap: 2.5rem;
+            }
+        }
+
+        & span {
+            color: $white;
+            font-size: .875rem;
+            line-height: 140%;
+            font-weight: 700;
+            display: block;
+
+            @include lg {
+                font-size: 1.3125rem;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+
+        &-slider {
+            width: 100%;
+            height: 100%;
+            &-wrap { 
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+
+            &-thumb {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                padding-bottom: 148.75%;
+                
+
+                @include lg {
+                    padding-bottom: 46.09375%;
+                }
+
+                & img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-item div { 
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
+}
