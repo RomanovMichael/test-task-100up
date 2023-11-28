@@ -680,6 +680,7 @@ address {
 @media screen and (min-width: 992px) {
   .hello {
     padding-top: 8.125rem;
+    height: 63.275;
   }
 }
 .hello .container-fluid {

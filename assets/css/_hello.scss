@@ -5,10 +5,11 @@
     // height: 100vh;
     height: 39.1875rem;
     min-height: 39.1875rem;
-    padding-top: 3.75rem ;
+    padding-top: 3.75rem;
 
     @include lg {
         padding-top:  8.125rem;
+        height: 63.275;
     }
 
     & .container-fluid {
