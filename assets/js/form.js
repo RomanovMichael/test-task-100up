@@ -33,7 +33,6 @@ function validation(form) {
 
         if (input.dataset.privacy == "true" && !input.checked) {
             createError(input, '')
-
         }
     }
 
