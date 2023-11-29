@@ -1,7 +1,7 @@
 // map
-initMap();
 
-function initMap() {
+
+(function () {
   let myMap;
   let myPlacemark;
 
@@ -23,4 +23,4 @@ function initMap() {
       myMap.geoObjects.add(myPlacemark);
   };
   ymaps.ready(init);
-}
+}) ();
