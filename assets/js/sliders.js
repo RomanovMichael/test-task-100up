@@ -60,6 +60,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 991 && helloSliderType == 'desktop') {
     helloSliderType = 'mobile'
     initSlider(helloSliderType)
+
   } else if (window.innerWidth > 991 && helloSliderType == 'mobile') {
     helloSliderType = 'desktop'
     initSlider(helloSliderType)
@@ -82,7 +83,6 @@ function initSliderCatalog(type) {
       loop: true,
       slidesPerView: 2,
       spaceBetween: 16,
-      sliderPerGroup: 1,
       pagination: {
         el: '#catalogSlider .swiper-pagination',
         type: 'bullets',
@@ -98,7 +98,7 @@ function initSliderCatalog(type) {
           spaceBetween: 30
         },
         1400: {
-          slidesPerView:4
+          slidesPerView: 4
         }
       }
     }
@@ -139,12 +139,8 @@ function initSliderCatalogFav(type) {
     catalogFavSliderSettings = {
       direction: 'horizontal',
       grabCursor: true,
-      observer: true,
-      observeParents: true,
-      loop: true,
       slidesPerView: 2,
       spaceBetween: 16,
-      sliderPerGroup: 1,
       pagination: {
         el: '#catalogFavSlider .swiper-pagination',
         type: 'bullets',
@@ -168,10 +164,12 @@ function initSliderCatalogFav(type) {
 
   if (catalogFavSwiperSlider.destroy && typeof catalogFavSwiperSlider.destroy === "function") {
     catalogFavSwiperSlider.destroy(true);
+    console.log('destroy')
   }
 
   if (type == "desktop") {
     catalogFavSwiperSlider = new Swiper(catalogFavSliderElement, catalogFavSliderSettings)
+    console.log('init')
   }
 
 }
@@ -182,7 +180,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 768 && catalogFavSliderType == 'desktop') {
     catalogFavSliderType = 'mobile'
     initSliderCatalogFav(catalogFavSliderType)
-  } else if (window.innerWidth > 768 && catalogSliderType == 'mobile') {
+  } else if (window.innerWidth > 768 && catalogFavSliderType == 'mobile') {
     catalogFavSliderType = 'desktop'
     initSliderCatalogFav(catalogFavSliderType)
   }
@@ -200,12 +198,10 @@ function initSliderCatalogFavourites(type) {
     catalogFavouritesSliderSettings = {
       direction: 'horizontal',
       grabCursor: true,
-      observer: true,
       observeParents: true,
-      loop: true,
       slidesPerView: 2,
       spaceBetween: 16,
-      sliderPerGroup: 1,
+      // sliderPerGroup: 1,
       pagination: {
         el: '#catalogFavouritesSlider .swiper-pagination',
         type: 'bullets',
@@ -252,32 +248,31 @@ window.addEventListener("resize", () => {
 
 // slider reviews
 const swiperReviews = new Swiper('#reviewsSlider', {
-    direction: 'horizontal',
-    loop: true,
-    grabCursor: true,
-    simulateTouch: true,
-    slidesPerView: 1,
-    spaceBetween: 16,
-    pagination: {
-      el: ' #reviewsSlider .swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-  
+  direction: 'horizontal',
+  loop: true,
+  grabCursor: true,
+  simulateTouch: true,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  pagination: {
+    el: ' #reviewsSlider .swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 22
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 22
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 1
-      },
-      1200: {
-        slidesPerView: 2,
-      }
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 1
+    },
+    1200: {
+      slidesPerView: 2,
     }
-  });
-  
+  }
+});
