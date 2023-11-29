@@ -682,6 +682,11 @@ address {
     padding-top: 8.125rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .hello {
+    min-height: 59rem;
+  }
+}
 .hello .container-fluid {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -742,6 +747,7 @@ address {
 .hello__btn {
   z-index: 1;
   margin-top: 3rem;
+  font-size: 1.3125rem;
 }
 @media screen and (min-width: 992px) {
   .hello__btn {
@@ -2161,6 +2167,12 @@ address {
   .footer-top__btn {
     margin-top: 0;
     margin-bottom: 2.0625rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer-top__btn {
+    width: 17.125rem;
+    height: 3.25rem;
   }
 }
 

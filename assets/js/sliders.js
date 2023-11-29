@@ -164,12 +164,10 @@ function initSliderCatalogFav(type) {
 
   if (catalogFavSwiperSlider.destroy && typeof catalogFavSwiperSlider.destroy === "function") {
     catalogFavSwiperSlider.destroy(true);
-    console.log('destroy')
   }
 
   if (type == "desktop") {
     catalogFavSwiperSlider = new Swiper(catalogFavSliderElement, catalogFavSliderSettings)
-    console.log('init')
   }
 
 }
